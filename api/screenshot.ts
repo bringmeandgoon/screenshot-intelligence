@@ -34,7 +34,10 @@ async function analyzeScreenshot(
             { type: "text", text: prompt },
             {
               type: "image_url",
-              image_url: { url: `data:image/jpeg;base64,${imageBase64}` },
+              image_url: {
+                url: `data:image/jpeg;base64,${imageBase64}`,
+                detail: "low",
+              },
             },
           ],
         },
