@@ -159,10 +159,7 @@ async function analyzeScreenshot(imageBase64, userIntent, userCategory, env) {
           { type: 'text', text: prompt },
           {
             type: 'image_url',
-            image_url: {
-              url: `data:image/jpeg;base64,${imageBase64}`,
-              detail: 'auto',
-            },
+            image_url: `data:image/jpeg;base64,${imageBase64}`,
           },
         ],
       }],
