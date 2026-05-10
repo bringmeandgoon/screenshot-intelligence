@@ -177,7 +177,7 @@ async function analyzeScreenshot(imageBase64, userIntent, userCategory, env) {
   if (!response.ok) {
     const errorBody = await response.text();
     console.error(`[LLM] HTTP error: ${response.status} - ${errorBody}`);
-    throw new Error(`LLM API error: ${response.status}`);
+    throw new Error(`LLM API error: ${response.status} - ${errorBody}`);
   }
 
   const data = await response.json();
